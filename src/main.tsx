@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import { ThemeProvider } from "./providers/ThemeProvider";
 import { inject } from "@vercel/analytics";
+import { injectSpeedInsights } from "@vercel/speed-insights";
 
 const Main = () => {
   const router = createBrowserRouter(routes);
@@ -29,3 +30,4 @@ const Main = () => {
 createRoot(document.getElementById("root")!).render(<Main />);
 
 inject();
+injectSpeedInsights();
