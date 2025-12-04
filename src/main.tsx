@@ -4,8 +4,8 @@ import routes from "@utils/routes";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import { ThemeProvider } from "./providers/ThemeProvider";
-import { inject } from "@vercel/analytics";
-import { injectSpeedInsights } from "@vercel/speed-insights";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 const Main = () => {
   const router = createBrowserRouter(routes);
@@ -15,6 +15,8 @@ const Main = () => {
       <StrictMode>
         <ThemeProvider>
           <RouterProvider router={router} />
+          <Analytics />
+          <SpeedInsights />
         </ThemeProvider>
       </StrictMode>
     );
@@ -23,11 +25,10 @@ const Main = () => {
   return (
     <ThemeProvider>
       <RouterProvider router={router} />
+      <Analytics />
+      <SpeedInsights />
     </ThemeProvider>
   );
 };
 
 createRoot(document.getElementById("root")!).render(<Main />);
-
-inject();
-injectSpeedInsights();
