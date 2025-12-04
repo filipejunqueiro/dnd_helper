@@ -4,6 +4,7 @@ import routes from "@utils/routes";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import { ThemeProvider } from "./providers/ThemeProvider";
+import { Analytics } from "@vercel/analytics/next";
 
 const Main = () => {
   const router = createBrowserRouter(routes);
@@ -14,6 +15,7 @@ const Main = () => {
         <ThemeProvider>
           <RouterProvider router={router} />
         </ThemeProvider>
+        <Analytics />
       </StrictMode>
     );
   }
@@ -21,6 +23,7 @@ const Main = () => {
   return (
     <ThemeProvider>
       <RouterProvider router={router} />
+      <Analytics />
     </ThemeProvider>
   );
 };
