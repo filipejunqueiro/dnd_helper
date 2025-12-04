@@ -1,8 +1,9 @@
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
-import "@mantine/core/styles.css";
 import routes from "@utils/routes";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
+import { ThemeProvider } from "./providers/ThemeProvider";
 
 const Main = () => {
   const router = createBrowserRouter(routes);
@@ -10,12 +11,18 @@ const Main = () => {
   if (import.meta.env.DEV) {
     return (
       <StrictMode>
-        <RouterProvider router={router} />
+        <ThemeProvider>
+          <RouterProvider router={router} />
+        </ThemeProvider>
       </StrictMode>
     );
   }
 
-  return <RouterProvider router={router} />;
+  return (
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  );
 };
 
 createRoot(document.getElementById("root")!).render(<Main />);

@@ -26,9 +26,11 @@
 
     /* Aliases */
     "paths": {
+      "@/*": ["./src/*"],
       "@assets/*": ["./src/assets/*"],
       "@components/*": ["./src/components/*"],
       "@pages/*": ["./src/pages/*"],
+      "@providers/*": ["./src/providers/*"],
       "@services/*": ["./src/services/*"],
       "@utils/*": ["./src/utils/*"]
     }
