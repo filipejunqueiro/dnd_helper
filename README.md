@@ -11,6 +11,7 @@
 
 ```sh
 └── dnd_helper/
+    ├── LICENSE
     ├── README.md
     ├── components.json
     ├── eslint.config.js
@@ -21,14 +22,40 @@
     │   └── dnd.avif
     ├── src
     │   ├── assets
+    │   │   └── dnd_background.avif
     │   ├── components
+    │   │   ├── Footer.tsx
+    │   │   ├── ModeToggle.tsx
+    │   │   ├── Navbar.tsx
+    │   │   └── ui
+    │   │       ├── button.tsx
+    │   │       ├── card.tsx
+    │   │       ├── dialog.tsx
+    │   │       ├── dropdown-menu.tsx
+    │   │       ├── input.tsx
+    │   │       ├── navigation-menu.tsx
+    │   │       ├── separator.tsx
+    │   │       └── sheet.tsx
     │   ├── index.css
     │   ├── lib
+    │   │   └── utils.ts
     │   ├── main.tsx
     │   ├── pages
+    │   │   ├── Classes
+    │   │   │   └── index.tsx
+    │   │   ├── Landing
+    │   │   │   └── index.tsx
+    │   │   └── NotFound
+    │   │       └── index.tsx
     │   ├── providers
+    │   │   └── ThemeProvider
+    │   │       └── index.tsx
     │   ├── services
+    │   │   └── classes
+    │   │       └── index.ts
     │   └── utils
+    │       ├── api.ts
+    │       └── routes.ts
     ├── tsconfig.app.json
     ├── tsconfig.json
     ├── tsconfig.node.json
