@@ -1,75 +1,101 @@
-# React + TypeScript + Vite
+<p align="center"><h1 align="center">DND_HELPER</h1></p>
+<p align="center">
+	<img src="https://img.shields.io/github/license/filipejunqueiro/dnd_helper?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/filipejunqueiro/dnd_helper?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/filipejunqueiro/dnd_helper?style=default&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/filipejunqueiro/dnd_helper?style=default&color=0080ff" alt="repo-language-count">
+</p>
+<br>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##  Project Structure
 
-Currently, two official plugins are available:
+```sh
+└── dnd_helper/
+    ├── README.md
+    ├── components.json
+    ├── eslint.config.js
+    ├── index.html
+    ├── package.json
+    ├── pnpm-lock.yaml
+    ├── public
+    │   └── dnd.avif
+    ├── src
+    │   ├── assets
+    │   ├── components
+    │   ├── index.css
+    │   ├── lib
+    │   ├── main.tsx
+    │   ├── pages
+    │   ├── providers
+    │   ├── services
+    │   └── utils
+    ├── tsconfig.app.json
+    ├── tsconfig.json
+    ├── tsconfig.node.json
+    └── vite.config.ts
+```
+##  Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+###  Prerequisites
 
-## React Compiler
+Before getting started with dnd_helper, ensure your runtime environment meets the following requirements:
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **Programming Language:** TypeScript
+- **Package Manager:** PNPM or NPM
 
-Note: This will impact Vite dev & build performances.
+###  Installation
 
-## Expanding the ESLint configuration
+Install dnd_helper using one of the following methods:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Build from source:**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the dnd_helper repository:
+```sh
+❯ git clone https://github.com/filipejunqueiro/dnd_helper
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Navigate to the project directory:
+```sh
+❯ cd dnd_helper
+```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. Install the project dependencies:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+
+**Using `pnpm or npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/pnpm-CB3837.svg?style={badge_style}&logo=pnpm&logoColor=white" />](https://pnpm.io/)[<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+
+```sh
+❯ pnpm install
+```
+
+###  Usage
+Run dnd_helper using the following command:
+**Using `pnpm or npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/pnpm-CB3837.svg?style={badge_style}&logo=pnpm&logoColor=white" />](https://pnpm.io/)[<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+
+```sh
+❯ pnpm run dev
+```
+
+###  Building
+Build the app using the following command:
+**Using `pnpm or npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/pnpm-CB3837.svg?style={badge_style}&logo=pnpm&logoColor=white" />](https://pnpm.io/)[<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+
+```sh
+❯ pnpm run build
+```
+
+###  Testing
+Build the app and then run the test using the following command:
+**Using `pnpm or npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/pnpm-CB3837.svg?style={badge_style}&logo=pnpm&logoColor=white" />](https://pnpm.io/)[<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+
+```sh
+❯ pnpm run preview
+```
+
+###  Linting
+Lint the app using the following command:
+**Using `pnpm or npm`** &nbsp; [<img align="center" src="https://img.shields.io/badge/pnpm-CB3837.svg?style={badge_style}&logo=pnpm&logoColor=white" />](https://pnpm.io/)[<img align="center" src="https://img.shields.io/badge/npm-CB3837.svg?style={badge_style}&logo=npm&logoColor=white" />](https://www.npmjs.com/)
+
+```sh
+❯ pnpm run lint
 ```
